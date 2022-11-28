@@ -1,0 +1,17 @@
+package com.socgen.ivy.capstone.entities;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import lombok.Data;
+import org.hibernate.annotations.GenericGenerator;
+
+import javax.persistence.*;
+
+@Entity
+@Data
+@JsonIgnoreProperties(ignoreUnknown = true)
+public class Author {
+    @Id
+    private Long id;
+    private String firstName;
+    private String lastName;
+}

@@ -1,0 +1,15 @@
+server:
+  servlet:
+    context-path: /capstone/api/v1
+
+spring:
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+      dialect: org.hibernate.dialect.MySQLDialect
+  datasource:
+    url: jdbc:sqlserver://socgensqlserver.database.windows.net:1433;database=KRAzureSQLDB;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;
+    username: socgen-admin@socgensqlserver
+    password: Pa$$w0rd123$
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
