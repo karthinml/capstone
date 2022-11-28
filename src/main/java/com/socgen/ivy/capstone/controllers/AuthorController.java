@@ -2,6 +2,7 @@ package com.socgen.ivy.capstone.controllers;
 
 import com.socgen.ivy.capstone.entities.Author;
 import com.socgen.ivy.capstone.repositories.AuthorRepository;
+import javafx.application.Application;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -29,7 +30,7 @@ public class AuthorController {
     @DeleteMapping("/{id}")
     public ResponseEntity<String> deleteAuthor(@PathVariable("id") Long id) {
         authorRepository.deleteById(id);
-        return new ResponseEntity<>("", HttpStatus.OK);
+        return new ResponseEntity<>("Deleted", HttpStatus.OK);
     }
 
     @PutMapping("/{id}")
